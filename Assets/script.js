@@ -1,4 +1,21 @@
+//UppercaseChars
+//LowercaseChars
+//Alphanumeric
+//Symbols
+
+
+
+
 // Assignment code here
+function generatePassword() {
+  //ask the user how many characters
+  //ask the user if they want numbers
+  //ask the user if they want special characters
+  //ask the user if they want uppercase letters
+  //ask the user if they want lower case letters
+  //generate the password
+  //return the password
+}
 
 
 // Get references to the #generate element
