@@ -30,13 +30,17 @@ var SpecialChars = [
   ',' , '\\'
 ]
 
-
-
-
-
 // Assignment code here
 function generatePassword() {
-  //ask the user how many characters
+  //ask the user how many characters they want in password
+  var length = prompt ("How many characters would you like in your password?");
+        if (length === "" || length === null) {
+          alert ("You must provide a number between 8 and 128")
+        }
+
+
+
+
   //ask the user if they want numbers
   //ask the user if they want special characters
   //ask the user if they want uppercase letters
