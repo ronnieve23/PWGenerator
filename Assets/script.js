@@ -35,7 +35,16 @@ function generatePassword() {
   //ask the user how many characters they want in password
   var length = prompt ("How many characters would you like in your password?");
         if (length === "" || length === null) {
-          alert ("You must provide a number between 8 and 128")
+          alert ("You must provide a number between 8 and 128");
+          return
+        }
+        else {
+          length = parseInt(length);
+          Number.isInteger(length);
+          if (isNaN(length) || length < 8 || length > 128) {
+            alert ("You must provide a number between 8 and 128");
+            return
+          }
         }
 
 
