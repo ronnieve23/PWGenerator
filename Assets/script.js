@@ -46,16 +46,21 @@ function generatePassword() {
             return
           }
         }
-
-
-
-
   //ask the user if they want numbers
-  //ask the user if they want special characters
+  var hasNumbers = confirm ("Click OK if you want Numbers in your password");
+
   //ask the user if they want uppercase letters
+  var hasUppercaseChars = confirm ("Click OK if you want Uppercase Letters in your password");
+
   //ask the user if they want lower case letters
+  var hasLowercaseChars = confirm ("Click OK if you want Lowercase Letters in your password");
+
+  //ask the user if they want special characters
+  var hasSpecialChars = confirm ("Click OK if you want Special Characters in your password");
   //generate the password
+
   //return the password
+  
 }
 
 
