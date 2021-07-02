@@ -58,6 +58,17 @@ function generatePassword() {
   //ask the user if they want special characters
   var hasSpecialChars = confirm("Click OK if you want Special Characters in your password");
 
+  // check to see if user chose any characters to be added to password at all
+  if (
+    hasNumbers === false &&
+    hasUppercaseChars === false &&
+    hasLowercaseChars === false &&
+    hasSpecialChars === false
+  ) {
+    alert ("You must choose at least one type of character to add to generate a password");
+    generatePassword();
+  }
+
   // if user wants numbers, append numbers to character array
 
   // if user wants special characters, append special characters to character array
