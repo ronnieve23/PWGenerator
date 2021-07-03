@@ -95,7 +95,7 @@ function generatePassword() {
   //array for characters chosen by user to put in password
   var selectedchoices = [];
 
-  // if user wants numbers, append numbers to character array
+  //User choices to add to password
   if (choices.Numbers) {
     charchoices = charchoices + randomcharacter(Numbers);
     selectedchoices = selectedchoices.concat(Numbers);
