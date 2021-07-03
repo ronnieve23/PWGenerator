@@ -69,6 +69,15 @@ function generatePassword() {
     generatePassword();
   }
 
+  //User length and character type choices
+  var UserChoice = {
+    length: length,
+    Numbers: hasNumbers,
+    UppercaseChars: hasUppercaseChars,
+    LowercaseChars: hasLowercaseChars,
+    SpecialChars: hasSpecialChars
+  };
+
   // if user wants numbers, append numbers to character array
 
   // if user wants special characters, append special characters to character array
