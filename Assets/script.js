@@ -77,6 +77,17 @@ function generatePassword() {
     LowercaseChars: hasLowercaseChars,
     SpecialChars: hasSpecialChars
   };
+  return UserChoice;
+}
+//add random character from character array to password
+function randomcharacter (array){
+  var randArray = Math.floor(Math.random() * array.length )
+  return array[randArray];
+}
+
+ //generate the password
+
+
 
   // if user wants numbers, append numbers to character array
 
@@ -86,16 +97,10 @@ function generatePassword() {
 
   // if user wants lowercase letters, append lowercase letters
 
-  //generate the password
-
   //repeat based on number of desired characters
-
-  //add random character from character array to password
 
   //return the password
 
-
-}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
