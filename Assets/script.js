@@ -31,7 +31,7 @@ var SpecialChars = [
 ]
 
 // Assignment code here
-function generatePassword() {
+function PasswordChoices() {
   //ask the user how many characters they want in password
   var length = prompt("How many characters would you like in your password?");
   if (length === "" || length === null) {
@@ -66,7 +66,7 @@ function generatePassword() {
     hasSpecialChars === false
   ) {
     alert ("You must choose at least one type of character to add to generate a password");
-    generatePassword();
+    PasswordChoices();
   }
 
   //User length and character type choices
@@ -86,7 +86,6 @@ function randomcharacter (array){
 }
 
  //generate the password
-
 
 
   // if user wants numbers, append numbers to character array
