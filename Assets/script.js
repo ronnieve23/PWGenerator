@@ -65,7 +65,7 @@ function PasswordChoices() {
     hasLowercaseChars === false &&
     hasSpecialChars === false
   ) {
-    alert ("You must choose at least one type of character to add to generate a password");
+    alert("You must choose at least one type of character to add to generate a password");
     PasswordChoices();
   }
 
@@ -79,27 +79,50 @@ function PasswordChoices() {
   };
   return UserChoice;
 }
-//add random character from character array to password
-function randomcharacter (array){
-  var randArray = Math.floor(Math.random() * array.length )
+
+//random character generator
+function randomcharacter(array) {
+  var randArray = Math.floor(Math.random() * array.length)
   return array[randArray];
 }
 
- //generate the password
+//generate the password
+function generatePassword() {
+  var choices = PasswordChoices();
+  //array of character choices to include in password
+  var charchoices = [];
 
+  //array for characters chosen by user to put in password
+  var selectedchoices = [];
 
   // if user wants numbers, append numbers to character array
+  if (choices.Numbers) {
+    charchoices = charchoices + randomcharacter(Numbers);
+    selectedchoices = selectedchoices.concat(Numbers);
+  };
 
-  // if user wants special characters, append special characters to character array
+  if (choices.UppercaseChars) {
+    charchoices = charchoices + randomcharacter(UppercaseChars);
+    selectedchoices = selectedchoices.concat(UppercaseChars);
+  };
 
-  // if user wants uppercase letters, append upper case letetrs to characters array
+  if (choices.LowercaseChars) {
+    charchoices = charchoices + randomcharacter(LowercaseChars);
+    selectedchoices = selectedchoices.concat(LowercaseChars);
+  };
 
-  // if user wants lowercase letters, append lowercase letters
+  if (choices.SpecialChars) {
+    charchoices = charchoices + randomcharacter(SpecialChars);
+    selectedchoices = selectedchoices.concat(SpecialChars);
+  };
 
-  //repeat based on number of desired characters
-
+  var PassLength = choices.length - charchoices.length;
+  for (var i = 0; i < PassLength; i++) {
+    var password = charchoices += randomcharacter(selectedchoices);
+  }
   //return the password
-
+  return password;
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
